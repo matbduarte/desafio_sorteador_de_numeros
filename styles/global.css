@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-gray: #3D3D3D;
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --content-inverse: #030203;
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C0A0;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+    --gradient-border: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    --gradient-background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+    --gradient-content: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
+
+    --ff-sora: 'Sora', system-ui, sans-serif;
+    --display-lg: 800 4.5rem/1.3 var(--ff-sora);
+    --display-md: 800 2.5rem/1.3 var(--ff-sora);
+    --display-sm: 700 2rem/1.3 var(--ff-sora);
+
+    --ff-roboto-mono: 'Roboto Mono', system-ui, sans-serif;
+    --overline: 700 1rem/1.5 var(--ff-roboto-mono);
+
+    --ff-roboto-flex: 'Roboto Flex', system-ui, sans-serif;
+    --paragraph-lg: 500 1rem/1.5 var(--ff-roboto-flex);
+    --paragraph-md: 500 .875rem/1.5 var(--ff-roboto-flex);
+    --paragraph-sm: 500 .75rem/1.5 var(--ff-roboto-flex);
+    --label-md: 700 1.25rem/1.5 var(--ff-roboto-flex);
+    --label-sm: 700 1rem/1.5 var(--ff-roboto-flex);
+
+    --mt-logo: 4.75rem;     /* 76px */
+    --mb-logo: 5.5625rem;   /* 89px */
+
+    --px-base: 7.5rem;      /* 120px */
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    color: var(--text-color-primary);
+    
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-primary);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--text-color-primary);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+}
+
+h1, h2, h3 {
+    font: inherit
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul[role="list"] {
+    list-style: none;
+}
+
+@media (width < 85.375em) { /* 1366px */
+    :root {
+        --mt-logo: 2.75rem;     /* 44px */
+        --mb-logo: 2.875rem;    /* 46px */
+
+        --px-base: 2.25rem;     /* 36px */
+
+        --fs-lg: 2rem;
+        --fs-xl: 3rem;
+        --fs-2xl: 4rem;
+
+        --py-base: 1.5rem;
+        --py-lg: 2.5rem;
+        --px-xl: 5rem;
+
+        --px-lg: 2rem;
+    }
+}

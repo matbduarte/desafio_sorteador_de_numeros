@@ -1,0 +1,61 @@
+.py-base {
+    padding-block: var(--py-base);
+}
+
+.px-base {
+    padding-inline: var(--px-base);
+}
+
+.container {
+    --max-width: 1366px; /* 390px for mobile */
+    width: min(var(--max-width), 100% - var(--px-base) * 2); /* subtract lateral padding from both sides */
+    margin-inline: auto; /* center container */
+}
+
+.desktop-only {
+    display: initial;
+}
+
+/* make side by side on desktop */
+.even-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 6.75rem;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+@media (width < 85.375em) { /* 1366px */
+    .container {
+        --max-width: 24.375rem; /* 390px */
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    /* make one above the other on mobile */
+    .even-columns {
+        flex-direction: column;
+        gap: 2.625rem;  /* 42px */
+    }
+}

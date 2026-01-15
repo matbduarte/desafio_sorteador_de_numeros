@@ -48,6 +48,10 @@
     gap: 1rem;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .grid {
     display: grid;
 }

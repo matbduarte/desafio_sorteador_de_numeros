@@ -1,24 +1,52 @@
-button {
-    all: unset;
+
+.btn {
     width: 100%;
     height: 3.5rem;         /* 56px */
-    padding-inline: 1rem;   /* 16px */
+    border: 0;
     border-radius: .5rem;   /* 8px */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;             /* 8px */
+    gap: 0.5rem;
     box-sizing: border-box;
-
-    background-color: var(--background-tertiary);
+    background: var(--background-tertiary);
     font: var(--label-md);
-    color:var(--content-primary);
+    color: var(--content-primary);
     text-transform: uppercase;
-
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
 
-    &:hover,
-    &:focus {
-        background-color: var(--background-secondary);
-    }
+
+.btn:hover {
+    background: var(--gradient-border);
+}
+
+
+/* Borda interna para efeito de gradiente igual ao original */
+.btn::before {
+    content: "";
+    position: absolute;
+    border-radius: .5rem;
+    inset: 2px;
+    background-color: var(--background-tertiary);
+    z-index: 0;
+    transition: background 0.2s;
+}
+
+.btn:hover::before {
+    background-color: var(--background-secondary);
+}
+
+.btn span, .btn img {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
 }

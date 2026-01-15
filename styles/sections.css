@@ -14,14 +14,27 @@
             display: flex;
             flex-direction: column;
             gap: .75rem; /* 12px */
+
+            h2 {
+                font: var(--overline);
+                background: var(--gradient-content);
+                text-transform: uppercase;
     
-            font: var(--overline);
-            color: var(--content-primary);
-            text-transform: uppercase;
-    
-            p + p {
+                /* Clip the background to the text */
+                -webkit-background-clip: text;
+                background-clip: text;
+                
+                /* Make the text transparent so the gradient shows */
+                color: transparent;
+                
+                /* For Safari compatibility */
+                -webkit-text-fill-color: transparent;
+            }
+
+            h1 {
                 font: var(--display-lg);
                 color: var(--content-primary);
+                text-transform: uppercase;
             }
         }
     }
@@ -66,7 +79,6 @@
         p + p {
             font: var(--paragraph-lg);
             color: var(--content-secondary);
-            text-transform: lowercase;
         }
     }
 
@@ -79,6 +91,33 @@
             display: flex;
             flex-direction: row;
             gap: 0.75rem; /* 12px */
+        }
+    }
+
+    .results {
+        display: flex;
+        flex-direction: row;
+        gap: .25rem; /* 4px */
+        align-items: center;
+        justify-content: center;
+
+        .result-item {
+            padding-block: .5rem; /* 8px */
+
+            .result-box {
+                width: 5.25rem;  /* 84px */
+                height: 5.25rem; /* 84px */
+                border-radius: 1.75rem; /* 28px */
+                background: var(--content-brand);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font: var(--result-numbers);
+                    color: var(--content-inverse);
+                }
+            }
         }
     }
 }
@@ -94,7 +133,7 @@
             header {
                 gap: .5rem; /* 8px */
     
-                p + p {
+                h1 {
                     font: var(--display-md);
                 }
             }

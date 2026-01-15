@@ -40,6 +40,7 @@
 
     --ff-roboto-mono: 'Roboto Mono', system-ui, sans-serif;
     --overline: 700 1rem/1.5 var(--ff-roboto-mono);
+    --result-numbers: 700 3rem/1.5 var(--ff-roboto-mono);
 
     --ff-roboto-flex: 'Roboto Flex', system-ui, sans-serif;
     --paragraph-lg: 500 1rem/1.5 var(--ff-roboto-flex);

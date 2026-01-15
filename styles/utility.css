@@ -7,7 +7,7 @@
 }
 
 .container {
-    --max-width: 1366px; /* 390px for mobile */
+    --max-width: 1366px; /* 380px for mobile */
     width: min(var(--max-width), 100% - var(--px-base) * 2); /* subtract lateral padding from both sides */
     margin-inline: auto; /* center container */
 }
@@ -36,6 +36,14 @@
     align-items: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
 .gap-1 {
     gap: 1rem;
 }
@@ -46,7 +54,7 @@
 
 @media (width < 85.375em) { /* 1366px */
     .container {
-        --max-width: 24.375rem; /* 390px */
+        --max-width: 23.75rem; /* 380px */
     }
 
     .desktop-only {

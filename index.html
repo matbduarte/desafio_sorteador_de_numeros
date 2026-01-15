@@ -19,8 +19,8 @@
             <section class="left-section">
                 <div class="content">
                     <header>
-                        <p>Online - gratuito</p>
-                        <p>Sorteador de números</p>
+                        <h2>Online - gratuito</h2>
+                        <h1>Sorteador de números</h1>
                     </header>
                     <div class="queries">
                         <div class="queryItem">
@@ -44,23 +44,29 @@
             <section class="right-section">
                 <div class="title">
                     <p>Quero sortear:</p>
-                    <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                    <p class="lowercase">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
                 </div>
                 <div class="form">
                     <div class="inputs">
                         <div class="input-wrapper">
                             <label for="inputNUM">Números</label>
-                            <input id="inputNUM" type="text" name="inputNUM"/>
+                            <div class="gradient-border-input">
+                                <input id="inputNUM" type="text" name="inputNUM"/>
+                            </div>
                         </div>
                         <br />
                         <div class="input-wrapper">
                             <label for="inputDE">De</label>
-                            <input id="inputDE" type="text" name="inputDE"/>
+                            <div class="gradient-border-input">
+                                <input id="inputDE" type="text" name="inputDE"/>
+                            </div>
                         </div>
                         <br />
                         <div class="input-wrapper">
                             <label for="inputATE">Até</label>
-                            <input id="inputATE" type="text" name="inputATE"/>
+                            <div class="gradient-border-input">
+                                <input id="inputATE" type="text" name="inputATE"/>
+                            </div>
                         </div>
                     </div>
                     <div class="terms-wrapper checkbox-wrapper">
@@ -69,10 +75,12 @@
                         <label for="repeat">Não repetir número</label>
                     </div>
                 </div>
-                <button>
-                    Sortear
-                    <img src="assets/icons/arrow-right.svg" alt="">
-                </button>
+                <div class="flex gap-1">
+                    <button type="button" class="btn">
+                        <span>SORTEAR</span>
+                        <img src="assets/icons/arrow-right.svg" alt="Seta para a direita" class="btn-arrow" />
+                    </button>
+                </div>
                 <div class="queries-mobile">
                     <div class="queryItem">
                         <img src="assets/icons/queries.svg" alt="">
@@ -90,8 +98,48 @@
                     </div>
                 </div>
             </section>
+
+            <!-- <section class="right-section">
+                <div class="title text-center">
+                    <p>Resultado do Sorteio:</p>
+                    <p>1º RESULTADO</p>
+                </div>
+                <div class="results">
+                    <div class="result-item">
+                        <div class="result-box">
+                            <span>25</span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-box">
+                            <span>33</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-1">
+                    <button type="button" class="btn">
+                        <span>SORTEAR NOVAMENTE</span>
+                        <img src="assets/icons/play-again.svg" alt="Play again" class="btn-arrow" />
+                    </button>
+                </div>
+                <div class="queries-mobile">
+                    <div class="queryItem">
+                        <img src="assets/icons/queries.svg" alt="">
+                        <div>
+                            <p>Como funciona o sorteador de números?</p>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                        </div>
+                    </div>
+                    <div class="queryItem">
+                        <img src="assets/icons/queries.svg" alt="">
+                        <div>
+                            <p>Posso escolher o intervalo dos números?</p>
+                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
         </div>
-        
     </main>
     <script src="scripts.js"></script>
   </body>

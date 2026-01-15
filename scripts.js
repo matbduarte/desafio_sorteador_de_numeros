@@ -129,9 +129,14 @@ function realizarSorteio(quantidade, minimo, maximo, naoRepetir) {
 function exibirResultados(numeros) {
   // Seleciona a div de resultados
   const resultsDiv = resultSection.querySelector('.results');
+  const btnContainer = resultSection.querySelector('.flex.gap-1');
 
   // Limpa os resultados anteriores
   resultsDiv.innerHTML = '';
+
+  // Esconde o botão inicialmente
+  btnContainer.style.opacity = '0';
+  btnContainer.style.visibility = 'hidden';
 
   // Atualiza o contador de resultado
   const tituloResultado = resultSection.querySelector('.title p:last-child');
@@ -167,6 +172,13 @@ function exibirResultados(numeros) {
       setTimeout(() => {
         resultItem.classList.remove('animating');
         resultItem.classList.add('revealed');
+        
+        // Se é o último número, mostra o botão após a animação
+        if (index === numeros.length - 1) {
+          btnContainer.style.transition = 'opacity 0.5s ease-in';
+          btnContainer.style.opacity = '1';
+          btnContainer.style.visibility = 'visible';
+        }
       }, 1500);
 
     }, index * 1500); // Espera 1.5 segundo entre cada número

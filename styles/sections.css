@@ -239,6 +239,12 @@
             }
         }
 
+        .form {
+            .inputs {
+                gap: 0.25rem; /* 4px - reduz o gap entre inputs */
+            }
+        }
+
         .results {
             max-width: 22rem; /* 4 items * 5.25rem + 3 gaps * 0.25rem */
         }
